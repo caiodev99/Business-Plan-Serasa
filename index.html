@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Parceria - FinUp & Serasa</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fonte Inter (padrão do Tailwind) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f3f4f6;
+        }
+        /* O contêiner principal do slide */
+        #presentation-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        /* Área do conteúdo do slide */
+        #slide-content {
+            flex-grow: 1;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Esconde todos os slides por padrão */
+        .slide {
+            display: none;
+            width: 100%;
+            animation: fadeIn 0.5s;
+        }
+        /* Mostra o slide ativo */
+        .slide.active {
+            display: block;
+        }
+        /* Animação de Fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Barra de navegação inferior */
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9fafb;
+        }
+        .nav-button {
+            background-color: #3b82f6; /* Azul */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .nav-button:hover {
+            background-color: #2563eb;
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        #slide-counter {
+            font-size: 0.875rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+        /* Estilos de Título e Tópicos */
+        .slide-title {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 24px;
+        }
+        .slide-topic {
+            font-size: 1.125rem; /* 18px */
+            color: #374151;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .slide-topic::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #3b82f6;
+        }
+        /* Estilos específicos do Slide de Capa */
+        .slide-cover {
+            text-align: center;
+        }
+        .slide-cover .slide-title {
+            font-size: 3rem; /* 48px */
+            color: #3b82f6;
+        }
+        .slide-cover .slide-subtitle {
+            font-size: 1.5rem; /* 24px */
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+        .slide-cover .slide-message {
+            font-size: 1.125rem; /* 18px */
+            color: #1f2937;
+            font-weight: 500;
+        }
+        /* Estilos do Slide de Encerramento */
+        .slide-end {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="presentation-container">
+        <!-- O conteúdo do slide será injetado aqui -->
+        <main id="slide-content">
+
+            <!-- Slide 1: Capa -->
+            <div class="slide active slide-cover">
+                <h1 class="slide-title">FinUp & Serasa</h1>
+                <h2 class="slide-subtitle">Parceria pela Transformação Financeira</h2>
+                <p class="slide-message">Alavancando a educação (Transforme-se) para desmistificar o crédito e reduzir a inadimplência jovem.</p>
+                <p class="mt-8 text-gray-500 font-medium">[FinUp] + [Serasa] + [PROA]</p>
+            </div>
+
+            <!-- Slide 2: Quem Somos -->
+            <div class="slide">
+                <h2 class="slide-title">Nascemos da Inovação do Serasa</h2>
+                <ul>
+                    <li class="slide-topic">Somos a FinUp, uma Edtech/Fintech gamificada, criada como Projeto Integrador do <strong>Transforme-se</strong> (a iniciativa Serasa + PROA).</li>
+                    <li class="slide-topic">Nosso time é formado por alunos que estão aprendendo programação e criando soluções reais para o problema da inadimplência.</li>
+                    <li class="slide-topic">Nosso Foco: Ajudar jovens das classes C e D a saírem das dívidas usando educação prática e tecnologia acessível.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 3: O Problema -->
+            <div class="slide">
+                <h2 class="slide-title">O "Mistério" do Score</h2>
+                <ul>
+                    <li class="slide-topic">Jovens (18-35) das classes C e D entram cedo no ciclo de endividamento.</li>
+                    <li class="slide-topic">A educação financeira tradicional é complexa e não engaja esse público.</li>
+                    <li class="slide-topic">O Score do Serasa é visto como um "vilão" ou um "mistério" (medo, vergonha), quando deveria ser uma ferramenta de <strong>orientação</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 4: Nossa Solução -->
+            <div class="slide">
+                <h2 class="slide-title">Educação Financeira que Engaja</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Gamificação:</strong> Usamos trilhas, missões e recompensas (estilo Duolingo) para ensinar conceitos complexos de forma simples.</li>
+                    <li class="slide-topic"><strong>Ferramentas Práticas:</strong> Oferecemos simuladores de dívidas, planejamento de metas e controle de gastos.</li>
+                    <li class="slide-topic"><strong>O Ponto-Chave:</strong> Queremos trazer o aprendizado para a vida real... e é aqui que a parceria começa.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5: A Grande Ideia -->
+            <div class="slide">
+                <h2 class="slide-title">Desmistificando o Score na Prática</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Conceito:</strong> Queremos conectar a educação financeira do FinUp diretamente ao Score do Serasa.</li>
+                    <li class="slide-topic"><strong>Como?</strong> Ao integrar a API do Serasa, o usuário vê, *em tempo real*, como suas ações no app impactam seu score.</li>
+                    <li class="slide-topic"><strong>Exemplo Prático:</strong>
+                        <ul class="list-disc pl-8 mt-2 space-y-2 text-gray-700">
+                            <li>Usuário completa a trilha "Como funcionam os Juros" -> App mostra tendência de melhoria.</li>
+                            <li>Usuário simula uma renegociação -> App mostra o impacto positivo *potencial* no score.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 6: Benefício (Marketing Positivo) -->
+            <div class="slide">
+                <h2 class="slide-title">Benefício ao Serasa: O Serasa que Transforma</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Reforço da Marca:</strong> A FinUp reforça a imagem do Serasa como <strong>educador</strong> e <strong>facilitador da transformação</strong>, alinhado 100% ao nome "Transforme-se".</li>
+                    <li class="slide-topic"><strong>Mudança de Percepção:</strong> Levamos o Serasa de uma imagem de "cobrador" para uma imagem de "parceiro" na jornada de saída das dívidas.</li>
+                    <li class="slide-topic"><strong>Case de Sucesso:</strong> A FinUp, nascida *dentro* do programa, torna-se o principal case de sucesso do "Transforme-se".</li>
+                </ul>
+            </div>
+
+            <!-- Slide 7: Benefício (Divulgação) -->
+            <div class="slide">
+                <h2 class="slide-title">Benefício ao Serasa: Fonte Oficial da Verdade</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Divulgação Orgânica:</strong> O Serasa será o parceiro oficial *dentro* do app. Cada consulta ao score e cada dica de crédito terá a marca Serasa.</li>
+                    <li class="slide-topic"><strong>Alcance ao Público-Alvo:</strong> Criamos um canal de comunicação direto e positivo com o público jovem (C e D) que o Serasa busca educar.</li>
+                    <li class="slide-topic"><strong>Ecossistema Positivo:</strong> Reforça a reputação com usuários que hoje podem ter uma imagem neutra ou negativa da marca.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 8: O Pedido -->
+            <div class="slide">
+                <h2 class="slide-title">O Que Buscamos (O Próximo Passo)</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Acesso à API do Score:</strong> Solicitamos uma chave de API (mesmo que em versão educacional, "sandbox" ou limitada) para integrar a consulta do score de forma educativa.</li>
+                    <li class="slide-topic"><strong>Orientação Técnica:</strong> O contato da área responsável no Serasa para nos orientar sobre o uso correto e seguro da API e dos dados.</li>
+                    <li class="slide-topic"><strong>Validação:</strong> Queremos garantir que nossa solução esteja 100% alinhada com as diretrizes e objetivos do Serasa.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 9: Nossa Contrapartida -->
+            <div class="slide">
+                <h2 class="slide-title">Nossa Contrapartida</h2>
+                <ul>
+                    <li class="slide-topic"><strong>Destaque Total da Parceria:</strong> O Serasa será o "Powered by" de toda a jornada de crédito do FinUp (telas de score, trilhas de crédito, onboarding).</li>
+                    <li class="slide-topic"><strong>Reforço da Narrativa "Transforme-se":</strong> Seremos o principal case de marketing do programa, provando o impacto social da iniciativa.</li>
+                    <li class="slide-topic"><strong>Feedback Educacional:</strong> Forneceremos relatórios (anonimizados) sobre as principais dúvidas dos jovens ao aprender sobre o score.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 10: Encerramento -->
+            <div class="slide slide-end">
+                <h1 class="slide-title">Vamos Transformar Juntos?</h1>
+                <p class="slide-message mb-6">A FinUp nasceu da visão do Serasa. Agora, queremos levar essa visão adiante como seu principal parceiro na educação financeira de milhões de jovens.</p>
+                <p class="text-lg font-semibold text-gray-800">Obrigado!</p>
+                <p class="mt-4 text-gray-600">[Seu Nome/E-mail/Telefone]</p>
+            </div>
+
+        </main>
+        
+        <!-- Navegação -->
+        <footer>
+            <button id="prev-button" class="nav-button">Anterior</button>
+            <span id="slide-counter">Slide 1 de 10</span>
+            <button id="next-button" class="nav-button">Próximo</button>
+        </footer>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+
+        const prevButton = document.getElementById("prev-button");
+        const nextButton = document.getElementById("next-button");
+        const slideCounter = document.getElementById("slide-counter");
+
+        function showSlide(index) {
+            // Esconde o slide atual
+            slides[currentSlide].classList.remove("active");
+
+            // Define o novo slide
+            currentSlide = index;
+
+            // Mostra o novo slide
+            slides[currentSlide].classList.add("active");
+
+            // Atualiza o contador
+            slideCounter.textContent = `Slide ${currentSlide + 1} de ${totalSlides}`;
+
+            // Atualiza os botões
+            prevButton.disabled = (currentSlide === 0);
+            nextButton.disabled = (currentSlide === totalSlides - 1);
+        }
+
+        // Event Listeners dos botões
+        prevButton.addEventListener("click", () => {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        });
+
+        // Inicializa a apresentação
+        showSlide(0);
+    </script>
+
+</body>
+</html>
